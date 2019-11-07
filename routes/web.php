@@ -18,11 +18,11 @@ Route::get('feed', 'PagesController@feed')->name('feed');
 
 Route::get('/tag/{tag}.html', 'TagsController@show')->name('tag.show');
 Route::get('/tags', 'TagsController@index')->name('tags');
-Route::resource('category', 'CategoriesController');
 Route::get('/category/{slug}.html','CategoriesController@index')->name('category.show');
+//Route::resource('category', 'CategoriesController');
 Route::patch('/post/restore', 'PostsController@restore')->name('post.restore');
 Route::post('/post/{post}/unlock', 'PostsController@unlock')->name('post.unlock');
-Route::resource('post', 'PostsController');
+//Route::resource('post', 'PostsController');
 Route::get('/post/{slug}.html','PostsController@index')->name('post.show');
 Route::resource('comment', 'CommentsController', ['only' => ['store', 'destroy']])->middleware('auth');
 Route::post('/favorites/comment/{comment}', 'FavoritesController@comment');
