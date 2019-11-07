@@ -19,7 +19,7 @@ class Seo extends Model
 
         foreach ($categories as $k => $v){
 
-            $urls[] = route('category.show', $v['slug']);
+            $urls[] = route('category.show_slug', $v['slug']);
 
         }
 
@@ -38,7 +38,7 @@ class Seo extends Model
 
         foreach ($posts as $k => $v){
 
-            $urls[] = route('post.show', $v['slug']);
+            $urls[] = route('post.show_slug', $v['slug']);
 
         }
 

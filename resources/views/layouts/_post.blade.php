@@ -2,7 +2,7 @@
   <article class="post">
     <div class="post-head">
       <h3 class="post-title">
-        <a href="{{route('post.show',$post->slug)}}">{{$post->title}}</a>
+        <a href="{{route('post.show_slug',$post->slug)}}">{{$post->title}}</a>
       </h3>
       <div class="post-meta">
           <span class="author">By
@@ -15,13 +15,13 @@
             {{$post->created_at->diffForHumans() }}
           </span>&bull;
         <span class="comment-count" data-toggle="tooltip" data-placement="bottom" title="查看该文章的评论">
-              <a href="{{route('post.show',$post->slug)}}#comments">{{$post->comments_count}}条评论</a>
+              <a href="{{route('post.show_slug',$post->slug)}}#comments">{{$post->comments_count}}条评论</a>
           </span>
       </div>
     </div>
     @if($post->cover)
       <div class="featured-media">
-        <a href="{{route('post.show',$post->slug)}}"><img src="{{$post->cover}}" alt="{{$post->title}}"></a>
+        <a href="{{route('post.show_slug',$post->slug)}}"><img src="{{$post->cover}}" alt="{{$post->title}}"></a>
       </div>
     @endif
     <div class="post-content">

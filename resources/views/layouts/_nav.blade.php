@@ -17,7 +17,7 @@
                 </li>
                 @foreach($cats as $cat)
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('category.show',$cat->slug)}}">{{$cat->name}}</a>
+                        <a class="nav-link" href="{{route('category.show_slug',$cat->slug)}}">{{$cat->name}}</a>
                     </li>
                 @endforeach
             </ul>

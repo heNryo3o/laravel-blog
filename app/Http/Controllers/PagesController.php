@@ -23,7 +23,7 @@ class PagesController extends Controller
             //分类目录
             $categorys = Category::all();
             $categorys->each(function ($category) use ($sitemap) {
-                $sitemap->add(route('category.show', $category->slug), Carbon::now()->toIso8601String(), '0.9', 'weekly');
+                $sitemap->add(route('category.show_slug', $category->slug), Carbon::now()->toIso8601String(), '0.9', 'weekly');
             });
             //标签
             $tags = Tag::all();
@@ -34,7 +34,7 @@ class PagesController extends Controller
             //文章
             $posts = Post::orderBy('created_at', 'desc')->get();
             $posts->each(function ($post) use ($sitemap) {
-                $sitemap->add(route('post.show', $post->slug), $post->updated_at->toIso8601String(), '0.8', 'monthly');
+                $sitemap->add(route('post.show_slug', $post->slug), $post->updated_at->toIso8601String(), '0.8', 'monthly');
             });
         }
 
