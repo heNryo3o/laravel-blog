@@ -22,8 +22,8 @@ Route::get('/category/{category}.html','CategoriesController@show')->name('categ
 Route::resource('category', 'CategoriesController');
 Route::patch('/post/restore', 'PostsController@restore')->name('post.restore');
 Route::post('/post/{post}/unlock', 'PostsController@unlock')->name('post.unlock');
-Route::resource('post', 'PostsController');
 Route::get('/post/{post}.html','PostsController@show')->name('post.show_slug');
+Route::resource('post', 'PostsController');
 Route::resource('comment', 'CommentsController', ['only' => ['store', 'destroy']])->middleware('auth');
 Route::post('/favorites/comment/{comment}', 'FavoritesController@comment');
 Route::post('/favorites/post/{post}', 'FavoritesController@post');
