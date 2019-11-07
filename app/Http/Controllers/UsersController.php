@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AvatarRequest;
 use App\Http\Requests\UserRequest;
 use App\Models\Comment;
+use App\Models\Seo;
 use App\Models\User;
 use App\Services\Upload;
 use Illuminate\Http\Request;
@@ -201,6 +202,15 @@ class UsersController extends Controller
             $reward = $user->extend->reward ?? 'false';
             return view('users.paycode', compact('user', 'reward'));
         }
+    }
+
+    public function test()
+    {
+
+        (new Seo())->pushUrl();
+
+        return;
+
     }
 
 }
