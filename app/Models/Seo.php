@@ -15,32 +15,32 @@ class Seo extends Model
 
         $urls[] = url('/');
 
-        $categorys = Category::all();
+        $categories = Category::all()->toArray();
 
-        $categorys->each(function ($category) {
+        foreach ($categories as $k => $v){
 
-            $urls[] = route('category.show', $category->slug);
+            $urls[] = route('category.show', $v['slug']);
 
-        });
+        }
 
         //标签
-        $tags = Tag::all();
+        $tags = Tag::all()->toArray();
 
-        $tags->each(function ($tag) {
+        foreach ($tags as $k => $v){
 
-            $urls[] = route('tag.show', $tag->name);
+            $urls[] = route('tag.show', $v['name']);
 
-        });
+        }
 
         $urls[] = route('tags');
 
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::orderBy('created_at', 'desc')->get()->toArray();
 
-        $posts->each(function ($post) {
+        foreach ($posts as $k => $v){
 
-            $urls[] = route('post.show', $post->slug);
+            $urls[] = route('post.show', $v['slug']);
 
-        });
+        }
 
         dd($urls);
 
