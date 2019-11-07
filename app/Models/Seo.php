@@ -42,8 +42,6 @@ class Seo extends Model
 
         }
 
-        dd($urls);
-
         $api = 'http://data.zz.baidu.com/urls?site=https://www.yuyinuo.cn&token=ublJMuNlBVDcTdmH';
         $ch = curl_init();
         $options =  array(
