@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'SITE_NAME' => '酷博',
-    'SITE_SLOGAN' => '一款优雅的博客系统',
-    'SITE_KEYWORD' => 'CoreBlog,酷博',
-    'SITE_DESCRIPTION' => 'CoreBlog酷博是一款基于Laravel开发的博客系统',
-    'SITE_ICP' => '京ICP证888888号',
-    'SITE_POLICE' => '京公网安备00000000000001号',
+    'SITE_NAME' => '于高衡的博客',
+    'SITE_SLOGAN' => '代码可以回滚，往事只能回味',
+    'SITE_KEYWORD' => 'php教程,php开发,laravel',
+    'SITE_DESCRIPTION' => '致力分享php教程,php开发,laravel相关知识,坚持每日更新！',
+    'SITE_ICP' => '',
+    'SITE_POLICE' => '',
     'AllOW_USER_CREATE_POST' => false,
     'VERIFY_COMMENT' => false,
     'WATERMARK' => false,
