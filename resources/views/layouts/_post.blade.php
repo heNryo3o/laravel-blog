@@ -7,7 +7,7 @@
       <div class="post-meta">
           <span class="author">By
              <a href="{{route('user.show',$post->user->name)}}" data-toggle="tooltip" data-placement="bottom"
-                title="查看{{$post->user->name}}发布的所有文章">{{$post->user->name}}
+                title="查看{{$post->user->name}}发布的所有文章">php开发程序员
              </a>
           </span> &bull;
         <span class="date" data-toggle="tooltip" data-placement="bottom"
