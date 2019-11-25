@@ -42,7 +42,7 @@ class Seo extends Model
 
         }
 
-        $api = 'http://data.zz.baidu.com/urls?site=https://www.yuyinuo.cn&token=ublJMuNlBVDcTdmH';
+        $api = 'http://data.zz.baidu.com/urls?site=https://www.yuyinuo.cn&token=MgYFX4B8Qc4pNZLF';
         $ch = curl_init();
         $options =  array(
             CURLOPT_URL => $api,
