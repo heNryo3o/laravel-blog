@@ -3811,6 +3811,10 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
   white-space: nowrap
 }
 
+.navbar-brand h1{
+  font-size: 1.125rem;
+}
+
 .navbar-brand:focus, .navbar-brand:hover {
   text-decoration: none
 }
