@@ -10,7 +10,7 @@
   <meta name="author" content="Flex">
   <link rel="manifest" href="/manifest.json">
   <!-- Styles -->
-  <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+  <link href="{{ mix('css/app.css') }}?v=1" rel="stylesheet">
   @yield('styles')
   <title>@yield('title',sysConfig('SITE_NAME').' - '.sysConfig('SITE_SLOGAN'))</title>
 </head>

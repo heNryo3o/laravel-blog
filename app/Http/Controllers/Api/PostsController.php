@@ -13,7 +13,7 @@ class PostsController extends Controller
     {
         $count = $request->input('count', 5);
         $recent_posts = Cache::remember('recent:posts', 3600, function () use ($count) {
-            return Post::getTopBy('id', $count);
+            return Post::gettype('published')->getTopBy('id', $count);
         });
         return $recent_posts;
     }

@@ -3804,7 +3804,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .navbar-brand {
   display: inline-block;
   padding-top: .32rem;
-  padding-bottom: .32rem;
   margin-right: 1rem;
   font-size: 1.125rem;
   line-height: inherit;
