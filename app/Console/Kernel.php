@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('push_url')->daily();
+        $schedule->command('push_url')->dailyAt('01:05');
         $schedule->command('post:sync-view-count')->daily();
     }
 
